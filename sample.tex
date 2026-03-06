@@ -1,0 +1,113 @@
+\documentclass[10pt, aspectratio=169]{beamer}
+
+% Load the custom theme
+\usetheme{violet}
+
+% Title page information
+\title[Short Title]{Your Main Presentation Title}
+\subtitle{An Optional Subtitle for the Presentation}
+\author{Your Name}
+\institute{Your Institute}
+\date{\today}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% --- Section 1: Introduction ---
+\section{Introduction}
+\begin{frame}{Background and Motivation}
+    \begin{itemize}
+        \item First primary point introducing the topic and establishing relevance.
+        \item Second point providing necessary context or literature review.
+        \item Third point stating the core research question or objective.
+    \end{itemize}
+    
+    \vspace{1em}
+    \begin{block}{Key Concept}
+        This block environment demonstrates the custom colors defined in the theme, utilizing the primary and secondary violet shades for emphasis.
+    \end{block}
+\end{frame}
+
+% --- Section 2: Methodology ---
+\section{Methodology}
+\begin{frame}{Empirical Model}
+    We estimate the following baseline model:
+    
+    \vspace{1em}
+    $$
+    Y_{it} = \alpha + \beta X_{it} + \gamma Z_{it} + \mu_i + \delta_t + \varepsilon_{it}
+    $$
+    \vspace{1em}
+    
+    \begin{itemize}
+        \item $Y_{it}$: The dependent variable of interest.
+        \item $X_{it}$: The primary explanatory variable.
+        \item $Z_{it}$: A vector of time-varying control variables.
+        \item $\mu_i, \delta_t$: Individual and time fixed effects.
+    \end{itemize}
+\end{frame}
+
+% --- Section 3: Results ---
+\section{Results}
+\begin{frame}{Main Regression Output}
+    \begin{table}
+        \centering
+        \begin{threeparttable}
+            \caption{Estimated Effects on Primary Outcome}
+            \begin{adjustbox}{max width=0.8\textwidth}
+            \begin{tabular}{l c c}
+                \toprule
+                & (1) Baseline & (2) With Controls \\
+                \midrule
+                Variable of Interest ($X$) & 0.452*** & 0.389** \\
+                                         & (0.112)  & (0.154) \\
+                Control Variable ($Z$)     &          & 0.085 \\
+                                         &          & (0.062) \\
+                \midrule
+                Observations               & 5,000    & 5,000   \\
+                Fixed Effects              & Yes      & Yes     \\
+                \bottomrule
+            \end{tabular}
+            \end{adjustbox}
+            \begin{tablenotes}\footnotesize
+                \item \textit{Notes:} Standard errors clustered at the group level in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+            \end{tablenotes}
+        \end{threeparttable}
+    \end{table}
+\end{frame}
+
+% --- Section 4: Implementation ---
+\section{Implementation}
+% Note: The [fragile] option is REQUIRED for any frame containing verbatim code blocks
+\begin{frame}[fragile]{Code Snippet Example}
+    The following snippet demonstrates the monospace font rendering for code environments:
+    
+    \vspace{1em}
+    \begin{block}{Pseudocode / Syntax}
+\begin{verbatim}
+import pandas as pd
+import statsmodels.api as sm
+
+# Fit a standard OLS model with clustered standard errors
+model = sm.OLS(Y, sm.add_constant(X))
+results = model.fit(cov_type='cluster', cov_kwds={'groups': df['id']})
+print(results.summary())
+\end{verbatim}
+    \end{block}
+\end{frame}
+
+% --- Section 5: Conclusion ---
+\section{Conclusion}
+\begin{frame}{Summary}
+    \begin{itemize}
+        \item \textbf{Finding 1:} A brief summary of the first main result and its implications.
+        \item \textbf{Finding 2:} A brief summary of the second main result.
+        \item \textbf{Future Work:} Outline potential extensions or robustness checks for the current methodology.
+    \end{itemize}
+\end{frame}
+
+\end{document}
