@@ -1,0 +1,78 @@
+\ProvidesPackage{beamerthemeviolet}
+\mode<presentation>
+
+% --- Packages ---
+
+% Math and Econometrics
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+
+% Advanced Tables (Crucial for Empirical Results)
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
+\RequirePackage{multirow} 
+\RequirePackage{makecell}
+\RequirePackage{threeparttable}
+
+% Figures and Layout
+\RequirePackage{graphicx}
+\RequirePackage{subcaption}
+
+% --- Font Settings ---
+% \RequirePackage{cochineal}    % Serif font
+\RequirePackage[default]{sourcesanspro}  % Sans-serif font
+\RequirePackage{inconsolata}    % Monospace font
+
+\setbeamerfont{title}{series=\bfseries, size=\Large}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamerfont{date}{size=\small}
+
+% --- 1. Base Structure ---
+\useoutertheme{infolines} % This keeps your favorite bottom bands
+\useinnertheme{circles} % Flat, professional look (no shadows)
+% \setbeamertemplate{navigation symbols}{} % Hide the nav icons
+
+% --- 2. Color Definitions ---
+\definecolor{Violet}{HTML}{AA7EE0}
+\definecolor{DarkViolet}{HTML}{4F328F}
+\definecolor{LightViolet}{HTML}{DFCCFF}
+
+% --- 3. Applying Colors to Elements ---
+
+% Footer and Header Bands (Madrid-style bands)
+\setbeamercolor{palette primary}{bg=LightViolet, fg=DarkViolet}    % Right segment (Slide #)
+\setbeamercolor{palette secondary}{bg=Violet, fg=white}      % Middle segment (Title)
+\setbeamercolor{palette tertiary}{bg=DarkViolet, fg=white}   % Left segment (Author/Inst)
+
+% Frame Titles (Minimalist)
+\setbeamercolor{frametitle}{fg=DarkViolet, bg=white} % Transparent background for a cleaner look
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+
+% Blocks (Minimalist & Flat)
+\setbeamercolor{block title}{bg=DarkViolet, fg=white}
+\setbeamercolor{block body}{bg=LightViolet!30, fg=black}
+\setbeamercolor{structure}{fg=DarkViolet}
+
+% Bullets and Numbers
+\setbeamercolor{structure}{fg=Violet}
+\setbeamercolor{item}{fg=Violet}
+
+% Title Page
+\setbeamercolor{title}{fg=DarkViolet, bg=}
+\setbeamerfont{title}{series=\bfseries, size=\Large}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{date}{fg=gray}
+
+% --- 4. Top Navigation Bar ---
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}
+    \insertsectionnavigationhorizontal{\paperwidth}{}{}
+  \end{beamercolorbox}
+}
+
+\setbeamercolor{section in head/foot}{bg=DarkViolet, fg=white}
+
+
+\mode<all>
