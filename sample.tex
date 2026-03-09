@@ -4,9 +4,15 @@
 \usetheme{violet}
 
 % Title page information
-\title[Short Title]{Your Main Presentation Title}
+\title[Short Title]{A Minimized Violet Beamer Theme}
 \subtitle{An Optional Subtitle for the Presentation}
-\author{Your Name}
+\author[Yan]{
+    Yan \\ 
+    \vspace{0.2cm}
+    \footnotesize
+    \href{mailto:yanzhuang2026@outlook.com}{\texttt{yanzhuang2026@outlook.com}} \\
+    \href{https://yanz-econ.github.io/}{\texttt{yanz-econ.github.io}}
+}
 \institute{Your Institute}
 \date{\today}
 
@@ -21,9 +27,9 @@
 \section{Introduction}
 \begin{frame}{Background and Motivation}
     \begin{itemize}
-        \item First primary point introducing the topic and establishing relevance.
-        \item Second point providing necessary context or literature review.
-        \item Third point stating the core research question or objective.
+        \item Your background and motivation.
+        \item If you set \texttt{XeLaTeX} as the compiler, you can use Chinese characters.
+        \item 中文字体为楷体.
     \end{itemize}
     
     \vspace{1em}
@@ -56,27 +62,27 @@
 \begin{frame}{Main Regression Output}
     \begin{table}
         \centering
-        \begin{threeparttable}
-            \caption{Estimated Effects on Primary Outcome}
-            \begin{adjustbox}{max width=0.8\textwidth}
-            \begin{tabular}{l c c}
-                \toprule
-                & (1) Baseline & (2) With Controls \\
-                \midrule
-                Variable of Interest ($X$) & 0.452*** & 0.389** \\
-                                         & (0.112)  & (0.154) \\
-                Control Variable ($Z$)     &          & 0.085 \\
-                                         &          & (0.062) \\
-                \midrule
-                Observations               & 5,000    & 5,000   \\
-                Fixed Effects              & Yes      & Yes     \\
-                \bottomrule
-            \end{tabular}
-            \end{adjustbox}
-            \begin{tablenotes}\footnotesize
-                \item \textit{Notes:} Standard errors clustered at the group level in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
-            \end{tablenotes}
-        \end{threeparttable}
+        \caption{Estimated Effects on Primary Outcome}
+        \begin{adjustbox}{max width=0.8\textwidth}
+        \begin{tabular}{lcc}
+            \toprule
+            & (1) Baseline & (2) With Controls \\
+            \midrule
+            Variable of Interest ($X$) & 0.452*** & 0.389** \\
+                                     & (0.112)  & (0.154) \\
+            Control Variable ($Z$)     &          & 0.085 \\
+                                     &          & (0.062) \\
+            \midrule
+            Observations               & 5,000    & 5,000   \\
+            Fixed Effects              & Yes      & Yes     \\
+            \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        
+        \begin{tablenotes}
+            \footnotesize
+            \textit{Notes:} Standard errors clustered at the group level in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+        \end{tablenotes}
     \end{table}
 \end{frame}
 
