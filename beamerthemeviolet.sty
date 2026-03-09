@@ -20,9 +20,13 @@
 \RequirePackage{subcaption}
 
 % --- Font Settings ---
+\RequirePackage[scheme=plain]{ctex}    % 中文支持
+\setCJKsansfont{FandolKai}             % 中文字体为楷体
+\setCJKmainfont{FandolKai}
+
 % \RequirePackage{cochineal}    % Serif font
 \RequirePackage[default]{sourcesanspro}  % Sans-serif font
-\RequirePackage{inconsolata}    % Monospace font
+\setmonofont{Inconsolata}
 
 \setbeamerfont{title}{series=\bfseries, size=\Large}
 \setbeamerfont{frametitle}{series=\bfseries}
@@ -53,7 +57,7 @@
 % Blocks (Minimalist & Flat)
 \setbeamercolor{block title}{bg=Violet, fg=white}
 \setbeamercolor{block body}{bg=LightViolet!30, fg=black}
-\setbeamercolor{structure}{fg=DarkViolet}
+\setbeamercolor{structure}{fg=Violet}
 
 % Bullets and Numbers
 \setbeamercolor{structure}{fg=Violet}
